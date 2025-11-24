@@ -44,66 +44,97 @@
         .dropdown-item:hover {
             background-color: #ffffff !important;
         }
-        .image {
+
+        /* MAIN WRAPPER */
+.image {
     display: flex;
-    justify-content: center;
+    justify-content: center;    /* CENTER ALL ITEMS */
     align-items: center;
-    margin: 50px 0;
-    gap: 20px; /* space between logo and video */
-    flex-wrap: wrap; /* stack on small screens */
+    flex-wrap: wrap;            /* Responsive wrap */
+    gap: 0;                     /* No space between logo & video */
+    margin-top: 40px;
 }
 
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
+/* LOGO + VIDEO BLOCK */
 .image-item {
-    flex: 1 1 300px; /* minimum width 300px, grow equally */
-    max-width: 900px; /* maximum width */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 550px; /* fixed height for both logo and video */
+    overflow: hidden;
+}
+
+/* LOGO SIZE */
+.logo-item {
+    width: 400px;
+    height: 400px;
     background-color: #042a47;
 }
-img {
-    padding: 100px;
-}
-.image-item img,
-.image-item iframe {
+
+.logo-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* ensures the content scales correctly */
+    object-fit: contain;
+    padding: 50px;
     display: block;
 }
 
-/* Responsive adjustments */
+/* VIDEO SIZE */
+.video-item {
+    width: 1100px;     /* exact width */
+    height: 400px;     /* same height as logo */
+    border: black 1px solid;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* fills without background */
+    display: block;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Large tablets */
 @media (max-width: 992px) {
-    .image-item {
-        height: 450px;
-        max-width: 350px;
+    .logo-item {
+        width: 300px;
+        height: 300px;
+    }
+
+    .video-item {
+        width: 900px;
+        height: 300px;
     }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
-    .image-item {
-        height: 350px;
-        max-width: 300px;
+    .logo-item {
+        width: 240px;
+        height: 240px;
+    }
+
+    .video-item {
+        width: 600px;
+        height: 240px;
     }
 }
 
+/* Mobile */
 @media (max-width: 576px) {
-    .image-item {
-        height: 250px;
-        max-width: 100%;
+    .logo-item {
+        width: 180px;
+        height: 180px;
+    }
+
+    .video-item {
+        width: 100%;
+        height: 200px;
     }
 }
 
 
-        
+                
     </style>
 </head>
 
@@ -181,30 +212,31 @@ img {
 </nav>
 
 
+    <div class="image">
 
-<div class="image">
-    <div class="image-container">
-        <!-- Logo -->
-        <div class="image-item">
-            <img src="{{ asset('img/logo.webp') }}" alt="Logo">
-        </div>
-
-        <!-- Vimeo Video -->
-        <div class="image-item">
-            <iframe 
-                src="https://player.vimeo.com/video/1101086567?h=fada1a13bc&autoplay=1&loop=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0" 
-                frameborder="0" 
-                allow="autoplay; fullscreen" 
-                allowfullscreen
-                title="Animation">
-            </iframe>
-        </div>
+    <!-- LOGO -->
+    <div class="image-item logo-item">
+        <img src="{{ asset('img/logo.webp') }}" alt="Logo">
     </div>
+
+    <!-- VIDEO -->
+    <div class="image-item video-item">
+        <iframe 
+            src="https://player.vimeo.com/video/1101086567?h=fada1a13bc&autoplay=1&loop=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0" 
+            frameborder="0" 
+            allow="autoplay; fullscreen" 
+            allowfullscreen
+            title="Animation">
+        </iframe>
+    </div>
+
 </div>
 
-<div class="franchise">
+
+
+{{-- <div class="franchise">
     <h2>FRANCHISE NOW!</h2>
-</div>
+</div> --}}
 
 
 
