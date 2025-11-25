@@ -45,3 +45,16 @@ Route::get('/franchisability/franchising_checklist', function () {
 Route::get('/contact', function () {
     return view('contact.contact');
 });
+
+//upload and logins
+Route::get('/franchise/application', function () {
+    return view('franchise_application');
+});
+
+Route::get('/franchise/supplies', function () {
+    return view('supplies_ordering');
+});
+
+Route::get('/franchise/requirements', function () {
+    return view('requirements_upload');
+});

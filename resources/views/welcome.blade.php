@@ -78,12 +78,13 @@
             gap: 0;
             width: 100%;
             margin-top: 40px;
+            margin-left: 100px
             flex-wrap: nowrap;
         }
 
         .logo-item {
             width: 450px;
-            height: 400px;
+            height: 510px;
             background-color: #042a47;
             display: flex;
             justify-content: center;
@@ -98,7 +99,7 @@
 
         .video-item {
             width: 900px;
-            height: 400px;
+            height: 510px;
             overflow: hidden;
             margin: 0;
             padding: 0;
@@ -116,50 +117,50 @@
 
 
         /* =========================
-           RESPONSIVE BEHAVIOR
-        ==========================*/
+   RESPONSIVE BEHAVIOR
+==========================*/
 
-        /* Large Tablets */
-        @media (max-width: 1200px) {
-            .image {
-                flex-wrap: wrap;
-                margin-top: 20px;
-            }
+/* Large Tablets */
+@media (max-width: 1200px) {
+    .image {
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
 
-            .video-item {
-                width: 95%;
-                height: 320px;
-            }
+    .logo-item,
+    .video-item {
+        width: 95%;
+        height: 320px; /* SAME HEIGHT */
+    }
+}
 
-            .logo-item {
-                width: 95%;
-                height: 300px;
-            }
-        }
+/* Tablets */
+@media (max-width: 768px) {
 
-        /* Tablets */
-        @media (max-width: 768px) {
+    .logo-item,
+    .video-item {
+        height: 300px; /* SAME HEIGHT */
+        width: 100%;   /* keeps clean layout */
+    }
+}
 
-            .logo-item {
-                height: 250px;
-            }
+/* Mobile */
+@media (max-width: 576px) {
 
-            .video-item {
-                height: 220px;
-            }
-        }
+    .logo-item,
+    .video-item {
+        height: 220px; /* SAME HEIGHT */
+    }
 
-        /* Mobile */
-        @media (max-width: 576px) {
+    /* FULL-WIDTH VIDEO EDGE-TO-EDGE */
+    .video-item {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+}
 
-            .logo-item {
-                height: 200px;
-            }
-
-            .video-item {
-                height: 180px;
-            }
-        }
 
 
 /* =========================
@@ -371,20 +372,72 @@
 
 
 
-/* =========================
-   FOOTER
-=========================*/
-
-.footer-title {
-    font-size: 22px;
-    font-weight: 600;
+/* FOOTER */
+footer.footer {
+    text-align: center;
+    padding: 50px 0;
+    background: #0d3553;
 }
 
+/* Footer title */
+.footer-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Footer text */
 .footer-address,
 .footer-contact,
 .footer-copy {
-    font-size: 16px;
+    font-size: 20px;
     opacity: 0.9;
+    margin: 10px 0;
+}
+
+.footer-copy {
+    margin-top: 20px;
+}
+
+/* =========================
+   RESPONSIVE FOOTER
+========================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+    footer.footer {
+        padding: 50px 0;
+    }
+
+    .footer-title {
+        font-size: 22px;
+    }
+
+    .footer-address,
+    .footer-contact,
+    .footer-copy {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    footer.footer {
+        padding: 50px; /* adds side spacing */
+    }
+
+    .footer-title {
+        font-size: 22px;
+    }
+
+    .footer-address,
+    .footer-contact,
+    .footer-copy {
+        font-size: 14px;
+        margin: 6px 0;
+        line-height: 1.6; /* better readability */
+    }
 }
 
     </style>
@@ -455,6 +508,17 @@
                     <li class="nav-item">
                         <a href="{{ url('/contact') }}" class="nav-link">CONTACT US</a>
                     </li>
+                    
+                    {{-- <li class="nav-item">
+                <a class="nav-link" href="{{ url('/franchise/application') }}">APPLICATION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/franchise/supplies') }}">SUPPLIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/franchise/requirements') }}">REQUIREMENTS</a>
+                    </li> --}}
+
 
                 </ul>
             </div>
@@ -591,7 +655,7 @@
     </div>
 </div>
 
-
+<hr>
 <!-- ============================
       FOOTER
 ============================= -->

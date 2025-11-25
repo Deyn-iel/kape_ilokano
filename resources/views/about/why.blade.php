@@ -216,28 +216,69 @@ body {
 /* FOOTER */
 footer.footer {
     text-align: center;
-    padding: 50px 0; /* increased spacing top & bottom */
+    padding: 50px 0;
     background: #0d3553;
 }
 
-/* Add more breathing room between footer elements */
+/* Footer title */
 .footer-title {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 15px; /* space under title */
+    margin-bottom: 15px;
 }
 
+/* Footer text */
 .footer-address,
 .footer-contact,
 .footer-copy {
-    font-size: 16px;
+    font-size: 20px;
     opacity: 0.9;
-    margin: 10px 0; /* increased spacing */
+    margin: 10px 0;
 }
 
-/* Optional: extra space above copyright */
 .footer-copy {
     margin-top: 20px;
+}
+
+/* =========================
+   RESPONSIVE FOOTER
+========================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+    footer.footer {
+        padding: 50px 0;
+    }
+
+    .footer-title {
+        font-size: 22px;
+    }
+
+    .footer-address,
+    .footer-contact,
+    .footer-copy {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    footer.footer {
+        padding: 50px; /* adds side spacing */
+    }
+
+    .footer-title {
+        font-size: 22px;
+    }
+
+    .footer-address,
+    .footer-contact,
+    .footer-copy {
+        font-size: 14px;
+        margin: 6px 0;
+        line-height: 1.6; /* better readability */
+    }
 }
 
     </style>
@@ -351,7 +392,7 @@ footer.footer {
         <button id="send-btn">➤</button>
     </div>
 </div>
-
+<hr>
 <!-- FOOTER -->
 <footer class="footer text-center">
     <h4 class="footer-title">Pinnacle Global Franchising Group Inc.</h4>

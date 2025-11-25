@@ -272,29 +272,72 @@ body {
 /* FOOTER */
 footer.footer {
     text-align: center;
-    padding: 50px 0; /* increased spacing top & bottom */
+    padding: 50px 0;
     background: #0d3553;
 }
 
-/* Add more breathing room between footer elements */
+/* Footer title */
 .footer-title {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 15px; /* space under title */
+    margin-bottom: 15px;
 }
 
+/* Footer text */
 .footer-address,
 .footer-contact,
 .footer-copy {
-    font-size: 16px;
+    font-size: 20px;
     opacity: 0.9;
-    margin: 10px 0; /* increased spacing */
+    margin: 10px 0;
 }
 
-/* Optional: extra space above copyright */
 .footer-copy {
     margin-top: 20px;
 }
+
+/* =========================
+   RESPONSIVE FOOTER
+========================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+    footer.footer {
+        padding: 50px 0;
+    }
+
+    .footer-title {
+        font-size: 22px;
+    }
+
+    .footer-address,
+    .footer-contact,
+    .footer-copy {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    footer.footer {
+        padding: 50px; /* adds side spacing */
+    }
+
+    .footer-title {
+        font-size: 22px;
+    }
+
+    .footer-address,
+    .footer-contact,
+    .footer-copy {
+        font-size: 14px;
+        margin: 6px 0;
+        line-height: 1.6; /* better readability */
+    }
+}
+
+
 
     </style>
 </head>
@@ -390,25 +433,145 @@ footer.footer {
 
     <h2>SERVICES</h2>
 
-    <p>While the needs of franchisors may vary...</p>
+    <p>While the needs of franchisors may vary, certain foundational consulting services are vital for any business preparing to franchise.
+
+Pinnacle Global Franchising Group is built to deliver these services with both speed and precision.
+
+<br><br>
+
+Whether it's updating a single document or managing a full-scale franchise development program, our experienced team adapts to meet the specific requirements of each client. With all franchise solutions offered under one roof, we provide expert guidance, identify opportunities, resolve challenges, and implement strategies efficiently, ensuring your business stays competitive and compliant in today’s marketplace.</p>
 
     <h3 class="service-title">Strategic Planning</h3>
-    <p>Every successful franchise journey begins...</p>
+    <p> Strategic Franchise Planning <br> <br>
+
+
+
+Every successful franchise journey begins with a solid, strategic business plan.
+
+At Pinnacle Global Franchising, our expert consultants work closely with you to evaluate your current market position and analyze the competitive landscape.
+
+Based on this assessment, we help you determine where to expand, who your ideal franchisees are, and how best to position your brand for growth.
+
+
+
+We also guide you in setting essential financial parameters including franchise fees, royalty rates, and marketing fund contributions. Once your strategy is defined, Pinnacle Global Franchising develops tailored programs and professionally designed materials to support your franchise rollout.
+
+
+
+Our Strategic Planning Services Include:
+
+
+
+<ul> Business Evaluation by a Senior Consultant
+(Franchisability Review and Business Model Assessment)
+Franchise Structure Development and Revenue Stream Design
+Comprehensive Competitor Analysis and Market Research</ul></p>
 
     <h3 class="service-title">Legal Documentation</h3>
-    <p>A well-crafted franchise agreement is essential...</p>
+    <p>Franchise Legal Agreements
+
+
+
+A well-crafted franchise agreement is essential to clearly define the legal and operational relationship between the franchisor and the franchisee. Pinnacle Global Franchising’s legal team will prepare a comprehensive Franchise Agreement tailored to your business and aligned with current industry standards and evolving franchise laws.
+
+
+
+This agreement will be developed based on insights gathered from our in-depth program analysis and strategic recommendations ensuring all aspects of the franchise offering are thoroughly covered.
+
+
+
+Types of Agreements We Offer:
+
+
+
+Unit Franchise Agreement – For individual franchise locations.
+Area Development Agreement – For franchisees developing multiple units within a specific territory.
+Master Franchise Agreement – For granting franchise rights across a wider region or country.
+Joint Venture Agreement – For collaborative ownership and operation of franchise units.</p>
 
     <h3 class="service-title">Franchise Sales Training</h3>
-    <p>While Pinnacle Global Franchising does not act...</p>
+    <p>Franchise Sales Training & Support
+
+
+
+While Pinnacle Global Franchising does not act as a broker for our clients, we provide comprehensive franchise sales training as part of our core services. Our seasoned franchise consultants, with years of industry experience, equip new and existing franchisors with the skills and knowledge needed to effectively sell their franchise.
+
+
+
+Participants receive hands-on training, a detailed “how-to” manual, and personalized guidance on proven sales techniques. To ensure continued success, we also offer ongoing implementation consulting helping clients apply what they’ve learned to real-world sales situations.
+
+
+
+For entrepreneurs seeking to invest in a franchise or get support in franchise reselling, we recommend visiting our trusted partner, U-Franchise Sales & Management the leading franchise sales company in the Philippines.</p>
 
     <h3 class="service-title">Operations Services</h3>
-    <p>Pinnacle Global Franchising’s team of experts...</p>
+    <p>Franchise Operations Manual Development
+
+
+
+Pinnacle Global Franchising’s team of expert consultants will create a detailed Franchise Operations Manual that outlines every essential task needed to run your business covering processes from opening to daily operations through to closing.
+
+
+
+This manual becomes an indispensable reference for franchisees, reinforcing training and ensuring operational consistency across all units.
+
+
+
+Our Operations Support Includes:
+
+
+
+Initial Analysis & Framework Design – A thorough assessment of your current systems and processes.
+Customized Operations Manual Development – Step-by-step procedures tailored to your business model.
+Operations Consulting – Expert guidance to streamline workflows and maximize efficiency.</p>
 
     <h3 class="service-title">Franchise Marketing Services</h3>
-    <p>Once you've identified your ideal franchise markets...</p>
+    <p>Franchise Marketing Strategy & Support
+
+
+
+Once you've identified your ideal franchise markets and target franchisee profile during the planning phase, the next step is to effectively communicate your opportunity. Pinnacle Global Franchising will craft a comprehensive marketing strategy tailored to attract the right prospects—using both media and non-media channels that are cost-effective and results-driven.
+
+
+
+Our team will develop your core franchise messaging and content, to be featured in marketing materials such as brochures, websites, advertisements, and more—ensuring a clear, compelling presentation of your brand.
+
+
+
+Our Franchise Marketing Services Include:
+
+
+
+Franchise Marketing Plan – A targeted, strategic roadmap for lead generation.
+Franchise Brochure Content & Core Messaging – Professionally written, brand-aligned materials.
+Marketing Consulting & Ongoing Support – Expert guidance through every stage of your campaign.
+Media & Non-Media Outreach – Leveraging networks, events, and platforms to boost visibility.</p>
 
     <h3 class="service-title">Special Services</h3>
-    <p>At Pinnacle Global Franchising, we are committed...</p>
+    <p>Ongoing Support & Supplemental Franchise Services
+
+
+
+At Pinnacle Global Franchising, we are committed to the long-term success of every client. Beyond initial development, we offer a range of supplemental services designed to support continuous growth, optimize performance, and strengthen your franchise system over time.
+
+
+
+Whether you're expanding locally or internationally, refining your model, or equipping your team with the right skills—our consultants provide expert guidance every step of the way.
+
+
+
+Our Extended Franchise Services Include:
+
+
+
+International Franchising Support
+Master Franchise & Area Development Programs
+Franchise Trainings & Seminars
+Franchise Program Audit & Review
+Franchise Management Training & Consulting
+General Franchise Consulting
+Business Modeling & Prototype Development
+Franchisability Studies</p>
 
 </div>
 
@@ -432,6 +595,7 @@ footer.footer {
     </div>
 </div>
 
+<hr>
 <!-- FOOTER -->
 <footer class="footer text-center">
     <h4 class="footer-title">Pinnacle Global Franchising Group Inc.</h4>
