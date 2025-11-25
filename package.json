@@ -15,6 +15,9 @@
         "vite": "^7.0.7"
     },
     "emmet.includeLanguages": {
-  "blade": "html"
-}
+        "blade": "html"
+    },
+    "dependencies": {
+        "firebase": "^12.6.0"
+    }
 }

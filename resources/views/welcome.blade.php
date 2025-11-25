@@ -9,20 +9,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-
+    html, body {
+        height: 100%;
+        overflow-x: hidden; /* prevent shifting */
+        -webkit-overflow-scrolling: auto !important;
+    }
         /* GLOBAL */
         body {
             background-color: #0d3553;
             color: #ffffff;
-            font-family: Helvetica;
+            font-family: 'Helvitica', sans-serif;
             margin: 0;
             padding: 0;
+            transform: none !important; /* Prevents parent transform bug */
         }
 
         /* NAVBAR */
         .navbar {
             background-color: #0d3553;
             padding: 10px 0;
+            font-size: 17px;
+            padding-top: 20px;
         }
 
         .navbar-nav .nav-link {
@@ -43,8 +50,21 @@
         /* SIMPLE TOGGLE */
         .navbar-toggler {
             border: none;
-            background-color: #ffffff !important;
         }
+        .navbar-toggler-icon {
+            filter: brightness(0) invert(1); /* makes icon white */
+        }
+        /* ACTIVE NAV-LINK LINE ON TOP */
+        .nav-link.active {
+            border-top: 2px solid #ffffff;
+            padding-top: 7px;
+            font-weight: bold;
+        }
+        .nav-link {
+            border-top: 3px solid transparent;
+            transition: 0.2s ease-in-out;
+        }
+
 
 
         /* =========================
@@ -80,7 +100,6 @@
             width: 900px;
             height: 400px;
             overflow: hidden;
-            border: 2px solid black;
             margin: 0;
             padding: 0;
         }
@@ -88,7 +107,7 @@
         .video-item iframe {
             width: 100%;
             height: 100%;
-            object-fit: fill; /* No cut, no zoom */
+            object-fit: fill;
             margin: 0 !important;
             padding: 0 !important;
             border: none !important;
@@ -105,7 +124,6 @@
             .image {
                 flex-wrap: wrap;
                 margin-top: 20px;
-                gap: 15px;
             }
 
             .video-item {
@@ -142,7 +160,12 @@
                 height: 180px;
             }
         }
-        /* Franchise Section */
+
+
+/* =========================
+   FRANCHISE SECTION
+=========================*/
+
 .franchise-title, .inquire-title {
     font-size: 25px;
     font-weight: 700;
@@ -151,9 +174,9 @@
 
 .underline {
     width: 120px;
-    height: 3px;
+    height: 2px;
     background-color: #ffffff;
-    margin: 10px auto 0 auto;
+    margin: 20px auto;
 }
 
 /* Circular Boxes */
@@ -165,14 +188,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 30px;
+    overflow: hidden;
     margin: 0 auto;
 }
 
+/* IMAGE FIX (Perfect Fit in Circle) */
 .circle-box img {
     width: 100%;
     height: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain;
+    display: block;
 }
 
 /* Brand Text */
@@ -186,7 +214,11 @@
     opacity: 0.9;
 }
 
-/* Inquire Section */
+
+/* =========================
+   INQUIRE SECTION
+=========================*/
+
 .form-field {
     background: transparent;
     border: 1px solid #ffffff;
@@ -215,7 +247,134 @@
     opacity: 0.7;
 }
 
-/* Footer */
+/* Floating Chat Button */
+#chat-button {
+    position: fixed !important;
+    inset: auto env(safe-area-inset-bottom) env(safe-area-inset-right) auto;
+    bottom: 25px !important;
+    right: 35px !important;
+
+    will-change: transform;
+    translate: 0 0;
+
+    background: #0d3553;
+    color: white;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999999; /* higher to avoid bootstrap */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+    /* Prevent shifting on mobile scroll */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Chatbox Window */
+#chatbox {
+    position: fixed !important;
+    bottom: 100px !important;
+    right: 25px !important;
+    will-change: transform;
+    width: 320px;
+    height: 420px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    z-index: 9999;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+/* Header */
+#chat-header {
+    background: #0d3553;
+    color: white;
+    padding: 12px 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Messages */
+#chat-messages {
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    background: #f4f4f4;
+}
+
+/* Messages Styling */
+.message {
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    max-width: 80%;
+}
+
+.user {
+    background: #0d3553;
+    color: white;
+    margin-left: auto;
+}
+
+.bot {
+    background: #e1e1e1;
+    color: black;
+}
+
+/* Input */
+#chat-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+#chat-text {
+    flex: 1;
+    border: none;
+    padding: 10px;
+}
+
+#chat-text:focus {
+    outline: none;
+}
+
+#send-btn {
+    background: #0d3553;
+    color: white;
+    border: none;
+    padding: 0 18px;
+    cursor: pointer;
+}
+
+
+
+
+/* =========================
+   FOOTER
+=========================*/
+
 .footer-title {
     font-size: 22px;
     font-weight: 600;
@@ -227,7 +386,6 @@
     font-size: 16px;
     opacity: 0.9;
 }
-
 
     </style>
 </head>
@@ -247,7 +405,8 @@
                 <ul class="navbar-nav text-center">
 
                     <li class="nav-item">
-                        <a href="{{ url('/') }}" class="nav-link">HOME</a>
+                        <a href="{{ url('/') }}" 
+                            class="nav-link {{ request()->is('/') ? 'active' : '' }}">HOME</a>
                     </li>
 
                     <!-- ABOUT MENU -->
@@ -265,17 +424,19 @@
 
                     <!-- SERVICES MENU -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle {{ request()->is('our_service/*') ? 'active' : '' }}" 
+                            href="#" id="servicesDropdown" data-bs-toggle="dropdown">
                             OUR SERVICES
-                        </a>
+                            </a>
+
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ url('/our_service/services') }}">Services</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/our_service/strategic') }}">Strategic Planning</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/our_service/legal') }}">Legal Documentation</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/our_service/franchise_sales') }}">Franchise Sales Training</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/our_service/operations') }}">Operations Services</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/our_service/franchise_marketing') }}">Franchise Marketing Ser.</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/our_service/special') }}">Special Services</a></li>
+                            <li><a class="dropdown-item" href="{{ url('our_service/#') }}">Services</a></li>
+                            <li><a class="dropdown-item" href="{{ url('our_service/#Strategic') }}">Strategic Planning</a></li>
+                            <li><a class="dropdown-item" href="{{ url('our_service/#') }}">Legal Documentation</a></li>
+                            <li><a class="dropdown-item" href="{{ url('our_service/#') }}">Franchise Sales Training</a></li>
+                            <li><a class="dropdown-item" href="{{ url('our_service/#') }}">Operations Services</a></li>
+                            <li><a class="dropdown-item" href="{{ url('our_service/#') }}">Franchise Marketing Ser.</a></li>
+                            <li><a class="dropdown-item" href="{{ url('our_service/#') }}">Special Services</a></li>
                         </ul>
                     </li>
 
@@ -301,6 +462,7 @@
     </nav>
 
 
+
     <!-- IMAGE + VIDEO SECTION -->
     <div class="image">
 
@@ -319,6 +481,8 @@
 
     </div>
 
+
+
 <!-- ============================
      FRANCHISE NOW SECTION
 ============================= -->
@@ -333,7 +497,7 @@
             <!-- KAPE ILOKANO -->
             <div class="col-md-5 col-lg-4 text-center">
                 <div class="circle-box">
-                    <img src="{{ asset('img/kape_ilokano.png') }}" alt="Kape Ilokano">
+                    <img src="{{ asset('img/kape.webp') }}" alt="Kape Ilokano">
                 </div>
                 <h3 class="brand-name mt-3">Kape Ilokano</h3>
                 <p class="brand-desc">Serving Naimas Nga Kape</p>
@@ -342,7 +506,7 @@
             <!-- PATATAS PROJECT -->
             <div class="col-md-5 col-lg-4 text-center">
                 <div class="circle-box">
-                    <img src="{{ asset('img/patatas.png') }}" alt="Patatas Project">
+                    <img src="{{ asset('img/patatas.webp') }}" alt="Patatas Project">
                 </div>
                 <h3 class="brand-name mt-3">Patatas Project</h3>
                 <p class="brand-desc">Fries that Fuel Dreams</p>
@@ -356,7 +520,7 @@
             <!-- MARIA COFFEE -->
             <div class="col-md-5 col-lg-4 text-center">
                 <div class="circle-box">
-                    <img src="{{ asset('img/maria_coffee.png') }}" alt="Maria Coffee">
+                    <img src="{{ asset('img/maria_cofee.webp') }}" alt="Maria Coffee">
                 </div>
                 <h3 class="brand-name mt-3">Maria Coffee</h3>
                 <p class="brand-desc">
@@ -367,7 +531,7 @@
             <!-- WINGS 2 GO -->
             <div class="col-md-5 col-lg-4 text-center">
                 <div class="circle-box">
-                    <img src="{{ asset('img/wings2go.png') }}" alt="Wings 2 Go">
+                    <img src="{{ asset('img/wings.webp') }}" alt="Wings 2 Go">
                 </div>
                 <h3 class="brand-name mt-3">Wings 2 Go</h3>
                 <p class="brand-desc">Best Chicken Wings of All Time</p>
@@ -376,6 +540,7 @@
         </div>
     </div>
 </section>
+
 
 
 <!-- ============================
@@ -408,6 +573,24 @@
     </div>
 </section>
 
+<!-- Floating Chat Button -->
+<div id="chat-button">💬</div>
+
+<!-- Chatbox Window -->
+<div id="chatbox">
+    <div id="chat-header">
+        <span>Message Pinnacle</span>
+        <button id="close-chat">×</button>
+    </div>
+
+    <div id="chat-messages"></div>
+
+    <div id="chat-input">
+        <input type="text" id="chat-text" placeholder="Type a message...">
+        <button id="send-btn">➤</button>
+    </div>
+</div>
+
 
 <!-- ============================
       FOOTER
@@ -430,8 +613,51 @@
 
 </footer>
 
+
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const btn = document.getElementById("chat-button");
+    const chatbox = document.getElementById("chatbox");
+    const closeChat = document.getElementById("close-chat");
+    const sendBtn = document.getElementById("send-btn");
+    const chatText = document.getElementById("chat-text");
+    const messages = document.getElementById("chat-messages");
+
+    btn.onclick = () => {
+        chatbox.style.display = "flex";
+        btn.style.display = "none";
+    };
+
+    closeChat.onclick = () => {
+        chatbox.style.display = "none";
+        btn.style.display = "flex";
+    };
+
+    sendBtn.onclick = sendMessage;
+
+    chatText.addEventListener("keypress", e => {
+        if (e.key === "Enter") sendMessage();
+    });
+
+    function sendMessage() {
+        let text = chatText.value.trim();
+        if (text === "") return;
+
+        // Display user message
+        messages.innerHTML += `<div class="message user">${text}</div>`;
+        chatText.value = "";
+
+        // Auto scroll
+        messages.scrollTop = messages.scrollHeight;
+
+        // Temporary bot reply
+        setTimeout(() => {
+            messages.innerHTML += `<div class="message bot">I'm thinking... (AI reply here)</div>`;
+            messages.scrollTop = messages.scrollHeight;
+        }, 800);
+    }
+</script>
 
 </body>
 </html>
