@@ -220,17 +220,111 @@
    INQUIRE SECTION
 =========================*/
 
-.form-field {
-    background: transparent;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    padding: 12px 15px;
+/* Center form fields */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.form-field::placeholder {
-    color: #ffffff;
-    opacity: 0.7;
+
+
+/* Focus effect */
+.form-field:focus {
+    outline: none;
+    border-color: #00c7ff;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 8px rgba(0, 199, 255, 0.6);
 }
+
+/* Hover effect */
+.form-field:hover {
+    border-color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-field {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-field {
+        width: 100%;
+    }
+}
+
+/* Wrapper */
+.field-group {
+    position: relative;
+    width: 65%;
+    margin-bottom: 20px;
+}
+
+/* Input style */
+.form-field {
+    width: 100%;
+    padding: 14px 15px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 0;
+    transition: 0.3s ease;
+}
+
+/* Placeholder normal state */
+.form-field::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.3s ease;
+}
+
+/* Floating label */
+.field-group label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+.field-group .label-message {
+    top: 20%;
+}
+/* When focusing */
+.form-field:focus::placeholder {
+    opacity: 0; /* hides placeholder smoothly */
+}
+
+/* FLOAT when focused or has text */
+.form-field:focus + label,
+.form-field:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 12px;
+    font-size: 13px;
+    color: #00c7ff;
+    padding: 0 6px;
+}
+
+/* Focus border glow */
+.form-field:focus {
+    border-color: #00c7ff;
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .field-group { width: 80%; }
+}
+
+@media (max-width: 576px) {
+    .field-group { width: 100%; }
+}
+
 
 .btn-submit {
     background: #ffffff;
@@ -621,18 +715,29 @@ footer.footer {
     <div class="container mt-4">
         <form>
 
-            <input type="text" class="form-control form-field mb-3" placeholder="Full Name*" required>
+            <div class="field-group">
+                <input type="text" class="form-field" placeholder="" required>
+                <label>Full Name*</label>
+            </div>
 
-            <input type="email" class="form-control form-field mb-3" placeholder="Email*" required>
+            <div class="field-group">
+                <input type="email" class="form-field" placeholder="" required>
+                <label>Email*</label>
+            </div>
 
-            <textarea class="form-control form-field mb-3" rows="5" placeholder="Message*" required></textarea>
+            <div class="field-group">
+                <textarea class="form-field" placeholder="" rows="5" required></textarea>
+                <label class="label-message">Message*</label>
+            </div>
+
+
 
             <button type="submit" class="btn-submit mt-2">SUBMIT</button>
 
         </form>
 
         <p class="recaptcha">
-            Este sitio está protegido por reCAPTCHA y aplican las Política de privacidad y los Términos de servicio de Google.
+            This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
         </p>
     </div>
 </section>

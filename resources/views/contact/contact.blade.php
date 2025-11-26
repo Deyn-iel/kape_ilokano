@@ -115,25 +115,115 @@ body {
     border: none;
     margin: 5px auto 0 auto;
 }
-/* Section Title */
+
+/* Section Title (desktop default) */
 .section-title {
     font-size: 22px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
-/* Form fields */
+/* Paragraph default */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 18px;
+        margin-bottom: 14px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 14px;
+        margin-bottom: 6px;
+        text-align: center;
+        line-height: 1.5;
+    }
+}
+
+
+
+/* Wrapper */
+.field-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+/* Inputs & textarea */
 .form-field {
+    width: 100%;
+    padding: 14px 15px;
     background: transparent;
     border: 1px solid #ffffff;
     color: #ffffff;
-    padding: 12px 15px;
+    border-radius: 0;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+.field-group .label-message {
+    top: 20%;
+}
+/* Make textarea match */
+.form-field.textarea {
+    resize: none;
 }
 
-.form-field::placeholder {
-    color: #ffffff;
-    opacity: 0.7;
+/* Floating label */
+.field-group label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: 0.3s ease;
+    font-size: 16px;
 }
+
+/* Move label up when typing or focused */
+.form-field:focus + label,
+.form-field:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #00c7ff;
+    background: transparent;
+    padding: 0 6px;
+}
+
+/* Focus glow */
+.form-field:focus {
+    outline: none;
+    border-color: #00c7ff;
+    box-shadow: 0 0 8px rgba(0, 199, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 20px;
+    }
+}
+
 
 /* Submit Button */
 .btn-submit {
@@ -145,7 +235,11 @@ body {
     font-weight: 600;
     border-radius: 5px;
 }
-
+.recaptcha {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+}
 /* Divider under text */
 .hr {
     width: 120px;
@@ -318,28 +412,69 @@ body {
 /* FOOTER */
 footer.footer {
     text-align: center;
-    padding: 50px 0; /* increased spacing top & bottom */
+    padding: 50px 0;
     background: #0d3553;
 }
 
-/* Add more breathing room between footer elements */
+/* Footer title */
 .footer-title {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 15px; /* space under title */
+    margin-bottom: 15px;
 }
 
+/* Footer text */
 .footer-address,
 .footer-contact,
 .footer-copy {
-    font-size: 16px;
+    font-size: 20px;
     opacity: 0.9;
-    margin: 10px 0; /* increased spacing */
+    margin: 10px 0;
 }
 
-/* Optional: extra space above copyright */
 .footer-copy {
     margin-top: 20px;
+}
+
+/* =========================
+   RESPONSIVE FOOTER
+========================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+    footer.footer {
+        padding: 50px 0;
+    }
+
+    .footer-title {
+        font-size: 22px;
+    }
+
+    .footer-address,
+    .footer-contact,
+    .footer-copy {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    footer.footer {
+        padding: 50px; /* adds side spacing */
+    }
+
+    .footer-title {
+        font-size: 22px;
+    }
+
+    .footer-address,
+    .footer-contact,
+    .footer-copy {
+        font-size: 14px;
+        margin: 6px 0;
+        line-height: 1.6; /* better readability */
+    }
 }
     </style>
 </head>
@@ -445,14 +580,31 @@ footer.footer {
         <div class="col-md-6 mb-4">
             <h3 class="section-title">Contact Us</h3>
 
-            <input type="text" class="form-control form-field mb-3" placeholder="Full Name*" required>
+            <form>
 
-            <input type="email" class="form-control form-field mb-3" placeholder="Email Address*" required>
+                <div class="field-group">
+                    <input type="text" class="form-field" placeholder=" " required>
+                    <label>Full Name*</label>
+                </div>
 
-            <textarea class="form-control form-field mb-3" rows="5" placeholder="Message*" required></textarea>
+                <div class="field-group">
+                    <input type="email" class="form-field" placeholder=" " required>
+                    <label>Email Address*</label>
+                </div>
 
-            <button class="btn-submit w-100">SEND</button>
+                <div class="field-group">
+                    <textarea class="form-field textarea" rows="5" placeholder=" " required></textarea>
+                    <label class="label-message">Message*</label>
+                </div>
+
+                <button class="btn-submit w-100 mt-2">SEND</button>
+
+            </form>
+            <p class="recaptcha">
+            This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+        </p>
         </div>
+
 
         <!-- RIGHT INFO -->
         <div class="col-md-5 text-start">

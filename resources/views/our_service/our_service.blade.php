@@ -387,7 +387,7 @@ footer.footer {
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('our_service/#') }}">Services</a></li>
-                            <li><a class="dropdown-item" href="{{ url('our_service/#Strategic') }}">Strategic Planning</a></li>
+                            <li><a class="dropdown-item" href="{{ url('our_service/#') }}">Strategic Planning</a></li>
                             <li><a class="dropdown-item" href="{{ url('our_service/#') }}">Legal Documentation</a></li>
                             <li><a class="dropdown-item" href="{{ url('our_service/#') }}">Franchise Sales Training</a></li>
                             <li><a class="dropdown-item" href="{{ url('our_service/#') }}">Operations Services</a></li>
