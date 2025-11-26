@@ -129,7 +129,7 @@ body {
 }
 .keys ul li {
     font-weight: bold;
-    font-size: 17px;
+    font-size: 18px;
     color: #bebebe;
 }
 
@@ -529,24 +529,24 @@ footer.footer {
         </ul>
         <h2>Assess Their Franchise Development Approach</h2>
         <ul>
-            <li>Do they use proven systems? </li>
-            <li>Is work done in-house, or is it outsourced? </li>
+            <li>Do they use <strong>proven systems?</strong> </li>
+            <li>Is work done <strong>in-house</strong>, or is it <strong>outsourced</strong>? </li>
         </ul>
         <h2>Evaluate the Firm's Experience</h2>
         <ul>
             <li>How long have they been in business?</li>
-            <li>Review their client portfolio and industry reputation.</li>
+            <li>Review their <strong>client portfolio</strong> and <strong>industry reputation.</strong></li>
             <li>Contact references to understand why others chose them and what value they gained.  </li>
         </ul>
         <h2>Review Their Internal Operations</h2>
         <ul>
-            <li>Is their team collaborative and communicative? 
+            <li>Is their team <strong>collaborative and communicative</strong>? 
                 <ul>
                     <li>Are they co-located or working remotely? </li>
                     <li>How often do team members meet face-to-face?</li>
                 </ul>
             </li>
-            <li>Will a dedicated project manager lead your franchise development? </li>
+            <li>Will a <strong>dedicated project manager</strong> lead your franchise development? </li>
         </ul>
         <h2>3. Decide if Franchising is Right for You</h2>
         <h2>Seek Trusted Opinions</h2>
@@ -556,14 +556,14 @@ footer.footer {
         </ul>
         <h2>Evaluate Your Resources</h2>
         <ul>
-            <li>Financial: Can you fund the franchise launch?</li>
-            <li>Team: Do you have the right people to support franchisees? </li>
-            <li>Motivation: Are you truly committed to building a franchise network?</li>
+            <li><strong>Financial:</strong> Can you fund the franchise launch?</li>
+            <li><strong>Team:</strong> Do you have the right people to support franchisees? </li>
+            <li><strong>Motivation:</strong> Are you truly committed to building a franchise network?</li>
         </ul>
         <h2>4. If You Decide to Franchise</h2>
         <h2>Hire the Right Franchise Consultant</h2>
         <ul>
-            <li>Ensure they offer a proven system and a transparent process. </li>
+            <li>Ensure they offer a <strong>proven system</strong> and a <strong>transparent process.</strong> </li>
             <li>Visit their offices to assess culture and professionalism. </li>
         </ul>
         <h2>Retain a Franchise Attorney</h2>
@@ -578,22 +578,22 @@ footer.footer {
         </ul>
         <h2>5. Common Mistakes to Avoid</h2>
         <ul>
-            <li>Don’t Make Assumptions
+            <li><strong>Don’t Make Assumptions</strong>
                 <ul>
                     Franchising success depends on preparation, not guesswork.
                 </ul>
             </li>
-            <li>Don’t Rely Solely on a Lawyer
+            <li><strong>Don’t Rely Solely on a Lawyer</strong>
                 <ul>
                     Legal documents don’t build franchises—solid systems and support do.
                 </ul>
             </li>
-            <li>Not All Lawyers Are Franchise Experts
+            <li><strong>Not All Lawyers Are Franchise Experts</strong>
                 <ul>
                     Ask about experience specifically in franchise law.
                 </ul>
             </li>
-            <li>Being a Franchisor Is Different from Being a Franchisee
+            <li><strong>Being a Franchisor Is Different from Being a Franchisee</strong>
                 <ul>
                     Running a franchise system requires leadership, coaching, and operational support skills.
                 </ul>
