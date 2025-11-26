@@ -78,7 +78,6 @@
             gap: 0;
             width: 100%;
             margin-top: 40px;
-            margin-left: 100px;
             flex-wrap: nowrap;
         }
 
@@ -604,13 +603,10 @@ footer.footer {
 }
 
     </style>
-    {{-- @vite('resources/css/app.css') --}}
 </head>
 
 <body>
-    <header>
-        @yield('section')
-    </header>
+
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
