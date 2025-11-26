@@ -58,3 +58,4 @@ Route::get('/franchise/supplies', function () {
 Route::get('/franchise/requirements', function () {
     return view('requirements_upload');
 });
+

@@ -78,7 +78,7 @@
             gap: 0;
             width: 100%;
             margin-top: 40px;
-            margin-left: 100px
+            margin-left: 100px;
             flex-wrap: nowrap;
         }
 
@@ -160,6 +160,75 @@
         border-radius: 0;
     }
 }
+/* Wrapper */
+.choices-button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 100px auto;
+    flex-wrap: wrap; /* ✅ allows wrapping on smaller screens */
+}
+
+/* Buttons */
+.choices-button button {
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+/* Link styling */
+.choices-button button a {
+    color: #0d3553 !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+}
+
+/* Hover effect */
+.choices-button button:hover {
+    background: #ffffff;
+    border-color: #0d3553;
+}
+
+.choices-button button:hover a {
+    color: #0d3553 !important;
+}
+
+/* =========================
+   ✅ RESPONSIVE
+========================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .choices-button {
+        gap: 15px;
+    }
+
+    .choices-button button {
+        padding: 10px 22px;
+    }
+
+    .choices-button button a {
+        font-size: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .choices-button {
+        flex-direction: column; /* ✅ stack buttons */
+        width: 80%;
+    }
+
+    .choices-button button {
+        width: 100%;
+    }
+}
 
 
 
@@ -182,8 +251,8 @@
 
 /* Circular Boxes */
 .circle-box {
-    width: 330px;
-    height: 330px;
+    width: 95%;
+    height: 70%;
     background: #ffffff;
     border-radius: 50%;
     display: flex;
@@ -535,10 +604,13 @@ footer.footer {
 }
 
     </style>
+    {{-- @vite('resources/css/app.css') --}}
 </head>
 
 <body>
-
+    <header>
+        @yield('section')
+    </header>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -603,15 +675,7 @@ footer.footer {
                         <a href="{{ url('/contact') }}" class="nav-link">CONTACT US</a>
                     </li>
                     
-                    {{-- <li class="nav-item">
-                <a class="nav-link" href="{{ url('/franchise/application') }}">APPLICATION</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/franchise/supplies') }}">SUPPLIES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/franchise/requirements') }}">REQUIREMENTS</a>
-                    </li> --}}
+                    {{-- afaeeae --}}
 
 
                 </ul>
@@ -638,6 +702,7 @@ footer.footer {
         </div>
 
     </div>
+
 
 
 
@@ -698,7 +763,12 @@ footer.footer {
         </div>
     </div>
 </section>
-
+{{-- choices buttons --}}
+<div class="choices-button">
+                <button><a class="nav-link" href="{{ url('/franchise/application') }}">APPLY NOW</a></button>
+                <button><a class="nav-link" href="{{ url('/franchise/supplies') }}">ORDER NOW</a></button>
+                <button><a class="nav-link" href="{{ url('/franchise/requirements') }}">UPLOAD REQUIREMENTS</a></button>
+            </div>
 
 
 <!-- ============================
