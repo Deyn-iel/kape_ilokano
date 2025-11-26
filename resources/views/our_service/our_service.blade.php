@@ -108,6 +108,7 @@ body {
 
 /* Main page title */
 .services > h2 {
+    margin-top: 40px;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 25px;

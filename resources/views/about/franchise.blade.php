@@ -98,6 +98,59 @@ body {
 }
 
 
+/* =========================
+   FRANCHISE SECTION
+=========================*/
+
+.franchise-title, .inquire-title {
+    margin-top: 40px;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.underline {
+    width: 120px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 20px auto;
+}
+
+/* Circular Boxes */
+.circle-box {
+    width: 350px;
+    height: 350px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* IMAGE FIX (Perfect Fit in Circle) */
+.circle-box img {
+    width: 100%;
+    height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Brand Text */
+.brand-name {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.brand-desc {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
 
 
 /* RESPONSIVE FIXES */
@@ -375,6 +428,65 @@ footer.footer {
 
 </div><!-- END MAIN WRAPPER -->
 
+
+
+<!-- ============================
+     FRANCHISE NOW SECTION
+============================= -->
+<section class="franchise-section text-center mt-5">
+
+    <h2 class="franchise-title">Our CLIENTS</h2>
+    <div class="underline"></div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center g-5">
+
+            <!-- KAPE ILOKANO -->
+            <div class="col-md-5 col-lg-4 text-center">
+                <div class="circle-box">
+                    <img src="{{ asset('img/kape.webp') }}" alt="Kape Ilokano">
+                </div>
+                <h3 class="brand-name mt-3">Kape Ilokano</h3>
+                <p class="brand-desc">Serving Naimas Nga Kape</p>
+            </div>
+
+            <!-- PATATAS PROJECT -->
+            <div class="col-md-5 col-lg-4 text-center">
+                <div class="circle-box">
+                    <img src="{{ asset('img/patatas.webp') }}" alt="Patatas Project">
+                </div>
+                <h3 class="brand-name mt-3">Patatas Project</h3>
+                <p class="brand-desc">Fries that Fuel Dreams</p>
+            </div>
+
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="row justify-content-center mt-5 g-5">
+
+            <!-- MARIA COFFEE -->
+            <div class="col-md-5 col-lg-4 text-center">
+                <div class="circle-box">
+                    <img src="{{ asset('img/maria_cofee.webp') }}" alt="Maria Coffee">
+                </div>
+                <h3 class="brand-name mt-3">Maria Coffee</h3>
+                <p class="brand-desc">
+                    Something good<br>is going to happen
+                </p>
+            </div>
+
+            <!-- WINGS 2 GO -->
+            <div class="col-md-5 col-lg-4 text-center">
+                <div class="circle-box">
+                    <img src="{{ asset('img/wings.webp') }}" alt="Wings 2 Go">
+                </div>
+                <h3 class="brand-name mt-3">Wings 2 Go</h3>
+                <p class="brand-desc">Best Chicken Wings of All Time</p>
+            </div>
+
+        </div>
+    </div>
+</section>
 <!-- CHAT BUTTON -->
 <div id="chat-button">💬</div>
 

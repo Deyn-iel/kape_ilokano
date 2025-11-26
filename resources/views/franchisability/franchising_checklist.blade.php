@@ -98,6 +98,107 @@ body {
 }
 
 
+/* =========================
+   FRANCHISE SECTION
+=========================*/
+
+.franchise-title, .inquire-title {
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.underline {
+    width: 120px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 20px auto;
+}
+
+.keys {
+    width:40%;
+    margin: 20px auto;
+    padding: 20px 10px;
+    text-align: left;
+}
+.keys h2 {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.keys ul li {
+    font-weight: bold;
+    font-size: 17px;
+    color: #bebebe;
+}
+
+
+/* ✅ Tablets */
+@media (max-width: 768px) {
+    .keys {
+        width: 70%;
+        padding: 18px;
+    }
+
+    .keys ul li {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+}
+
+/* ✅ Mobile phones */
+@media (max-width: 576px) {
+    .keys {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .keys ul li {
+        font-size: 17px;
+        margin-bottom: 28px;
+        line-height: 1.5;
+    }
+}
+
+
+
+
+/* Circular Boxes */
+.circle-box {
+    width: 350px;
+    height: 350px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* IMAGE FIX (Perfect Fit in Circle) */
+.circle-box img {
+    width: 100%;
+    height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Brand Text */
+.brand-name {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.brand-desc {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
 
 
 /* RESPONSIVE FIXES */
@@ -375,6 +476,130 @@ footer.footer {
 
 </div><!-- END MAIN WRAPPER -->
 
+
+
+<!-- ============================
+     FRANCHISE NOW SECTION
+============================= -->
+<section class="franchise-section text-center mt-5">
+
+    <h2 class="franchise-title">Franchising Checklist</h2>
+    <div class="underline"></div>
+</section>
+
+<div class="keys">
+        <h2>1. Evaluate Franchising Feasibility</h2>
+        <h2>Gather Key Information</h2>
+        <ul>
+            <li><strong>Attend Franchise Seminars & Webinars</strong>Learn from industry experts, franchisors, and consultants. </li>
+        </ul>
+        <ul>
+            <li><strong>Read Franchising Books</strong>Gain foundational knowledge about the franchising process, benefits, and risks. </li>
+        </ul>
+        <ul>
+            <li><strong>Consult a Franchise Analyst</strong>Get a professional evaluation of your business's potential to franchise. </li>
+        </ul>
+        <ul>
+            <li><strong>Take a Franchisability Assessment</strong>Use online quizzes or tools to gauge your business’s readiness.  </li>
+        </ul>
+        <h2>Explore All Growth Options</h2>
+        <ul>
+            <li><strong>Expand Internally</strong>Open new company-owned locations and maintain full control.  </li>
+        </ul>
+        <ul>
+            <li><strong>Seek Investors</strong>Raise capital to grow without franchising.</li>
+        </ul>
+        <ul>
+            <li><strong>Consider Franchising Models</strong>
+                <ul>
+                    <li><strong>Traditional Franchising:</strong> Replicate your entire business model under a brand. </li>
+                </ul>
+                <ul>
+                    <li><strong>Business Opportunity:</strong> Provide tools or services without strict brand control. </li>
+                </ul>
+                <ul>
+                    <li><strong>Licensing:</strong> Allow use of your IP without a full franchise agreement.  </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>2. Meet With a Franchise Consultant</h2>
+        <h2>Visit the Consultant’s Office</h2>
+        <ul>
+            <li>Evaluate the environment and professionalism of the team.</li>
+        </ul>
+        <h2>Assess Their Franchise Development Approach</h2>
+        <ul>
+            <li>Do they use proven systems? </li>
+            <li>Is work done in-house, or is it outsourced? </li>
+        </ul>
+        <h2>Evaluate the Firm's Experience</h2>
+        <ul>
+            <li>How long have they been in business?</li>
+            <li>Review their client portfolio and industry reputation.</li>
+            <li>Contact references to understand why others chose them and what value they gained.  </li>
+        </ul>
+        <h2>Review Their Internal Operations</h2>
+        <ul>
+            <li>Is their team collaborative and communicative? 
+                <ul>
+                    <li>Are they co-located or working remotely? </li>
+                    <li>How often do team members meet face-to-face?</li>
+                </ul>
+            </li>
+            <li>Will a dedicated project manager lead your franchise development? </li>
+        </ul>
+        <h2>3. Decide if Franchising is Right for You</h2>
+        <h2>Seek Trusted Opinions</h2>
+        <ul>
+            <li>Meet in person with consultants.</li>
+            <li>Speak with advisors, mentors, close friends, and family. </li>
+        </ul>
+        <h2>Evaluate Your Resources</h2>
+        <ul>
+            <li>Financial: Can you fund the franchise launch?</li>
+            <li>Team: Do you have the right people to support franchisees? </li>
+            <li>Motivation: Are you truly committed to building a franchise network?</li>
+        </ul>
+        <h2>4. If You Decide to Franchise</h2>
+        <h2>Hire the Right Franchise Consultant</h2>
+        <ul>
+            <li>Ensure they offer a proven system and a transparent process. </li>
+            <li>Visit their offices to assess culture and professionalism. </li>
+        </ul>
+        <h2>Retain a Franchise Attorney</h2>
+        <ul>
+            <li>They will handle:
+                <ul>
+                    <li>Franchise Disclosure Document (FDD) </li>
+                    <li>Franchise Agreement </li>
+                    <li>Regulatory compliance </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>5. Common Mistakes to Avoid</h2>
+        <ul>
+            <li>Don’t Make Assumptions
+                <ul>
+                    Franchising success depends on preparation, not guesswork.
+                </ul>
+            </li>
+            <li>Don’t Rely Solely on a Lawyer
+                <ul>
+                    Legal documents don’t build franchises—solid systems and support do.
+                </ul>
+            </li>
+            <li>Not All Lawyers Are Franchise Experts
+                <ul>
+                    Ask about experience specifically in franchise law.
+                </ul>
+            </li>
+            <li>Being a Franchisor Is Different from Being a Franchisee
+                <ul>
+                    Running a franchise system requires leadership, coaching, and operational support skills.
+                </ul>
+            </li>
+        </ul>
+    </div>
 <!-- CHAT BUTTON -->
 <div id="chat-button">💬</div>
 

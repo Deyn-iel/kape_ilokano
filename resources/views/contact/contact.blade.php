@@ -104,6 +104,7 @@ body {
 }
 
 .text h2 {
+    margin-top: 40px;
     display: inline-block;
     margin-bottom: 5px;
 }
@@ -601,7 +602,7 @@ footer.footer {
 
             </form>
             <p class="recaptcha">
-            This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+            This site is protected by reCAPTCHA and the <a href="https://policies.google.com/privacy">Google Privacy</a> Policy and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
         </p>
         </div>
 

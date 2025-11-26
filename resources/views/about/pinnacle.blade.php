@@ -98,6 +98,59 @@ body {
 }
 
 
+/* =========================
+   FRANCHISE SECTION
+=========================*/
+
+.franchise-title, .inquire-title {
+    margin-top: 40px;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.underline {
+    width: 120px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 20px auto;
+}
+
+/* Circular Boxes */
+.circle-box {
+    width: 350px;
+    height: 350px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* IMAGE FIX (Perfect Fit in Circle) */
+.circle-box img {
+    width: 100%;
+    height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Brand Text */
+.brand-name {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.brand-desc {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
 
 
 /* RESPONSIVE FIXES */
@@ -375,6 +428,39 @@ footer.footer {
 
 </div><!-- END MAIN WRAPPER -->
 
+
+
+<!-- ============================
+     FRANCHISE NOW SECTION
+============================= -->
+<section class="franchise-section text-center mt-5">
+
+    <h2 class="franchise-title">About Us</h2>
+    <div class="underline"></div>
+    <div class="main-img">
+    <div class="img1">
+        <h2>Pinnacle Global Franchising</h2>
+        <p> We help you overcome these roadblocks by creating the complete franchising blueprint your business needs—from operations 
+            to legal, branding to training. <br><br>
+            Let us do the heavy lifting while you focus on growing your vision.</p>
+        <img src="{{ asset('img/pinnacle_global.webp') }}" alt="Logo">
+    </div>
+    <div class="img2">
+        <h2>Mission</h2>
+        <p>Dedicated to empowering Filipinos to fulfill their entrepreneurial dreams through accessible and budget-friendly franchising opportunities.
+        <br><br>
+            Our mission is to create a supportive network that cultivates a wise generation of business-minded individuals, reduce unemployment and promotes sustainable entrepreneurship.</p>
+        <img src="{{ asset('img/mission.webp') }}" alt="Logo">
+    </div>
+    <div class="img3">
+        <h2>Vision</h2>
+        <p>We envision a future where every Filipino has the opportunity to own and operate their own successful business, contributing to a thriving economy and empowered communities. 
+        <br><br>
+            By fostering innovation, collaboration, and a strong business mindset, we aspire to inspire a culture of entrepreneurship that generations to come will embrace.</p>
+        <img src="{{ asset('img/vision.webp') }}" alt="Logo">
+    </div>
+    </div>
+</section>
 <!-- CHAT BUTTON -->
 <div id="chat-button">💬</div>
 

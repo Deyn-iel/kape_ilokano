@@ -98,6 +98,104 @@ body {
 }
 
 
+/* =========================
+   FRANCHISE SECTION
+=========================*/
+
+.franchise-title, .inquire-title {
+    margin-top: 40px;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.underline {
+    width: 120px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 20px auto;
+}
+
+.keys {
+    width: 40%;
+    margin: 20px auto;
+    padding: 20px 10px;
+    text-align: left;
+}
+
+.keys p {
+    font-weight: bold;
+    font-size: 20px;
+    color: #a8a8a8;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+/* ✅ Tablets */
+@media (max-width: 768px) {
+    .keys {
+        width: 70%;
+        padding: 18px;
+    }
+
+    .keys p {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+}
+
+/* ✅ Mobile phones */
+@media (max-width: 576px) {
+    .keys {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .keys p {
+        font-size: 17px;
+        margin-bottom: 28px;
+        line-height: 1.5;
+    }
+}
+
+
+
+
+/* Circular Boxes */
+.circle-box {
+    width: 350px;
+    height: 350px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* IMAGE FIX (Perfect Fit in Circle) */
+.circle-box img {
+    width: 100%;
+    height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Brand Text */
+.brand-name {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.brand-desc {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
 
 
 /* RESPONSIVE FIXES */
@@ -375,6 +473,37 @@ footer.footer {
 
 </div><!-- END MAIN WRAPPER -->
 
+
+
+<!-- ============================
+     FRANCHISE NOW SECTION
+============================= -->
+<section class="franchise-section text-center mt-5">
+
+    <h2 class="franchise-title">8 Keys to Franchisability</h2>
+    <div class="underline"></div>
+</section>
+
+<div class="keys">
+        <h2>Size and Longevity</h2>
+        <p>How long has your business been operating? 
+            <br>
+        Are you confident in its long-term performance?</p>
+        <h2>Profitability</h2>
+        <p>Is your business consistently generating profits? </p>
+        <h2>Teachability</h2>
+        <p>Can someone else be trained to run your business effectively?</p>
+        <h2>Systematization</h2>
+        <p>Are your business processes organized in a way that they can be replicated easily? </p>
+        <h2>Marketability</h2>
+        <p>Can your concept be clearly communicated and marketed to future franchisees? </p>
+        <h2>Transferability</h2>
+        <p>Do you believe your business model would work well in different locations? </p>
+        <h2>Originality</h2>
+        <p>What makes your brand stand out from competitors?</p>
+        <h2>Affordability</h2>
+        <p>After all franchise-related costs, will the franchisee still earn a fair and motivating profit? </p>
+    </div>
 <!-- CHAT BUTTON -->
 <div id="chat-button">💬</div>
 
