@@ -601,13 +601,12 @@ footer.footer {
         line-height: 1.6; /* better readability */
     }
 }
-
     </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- NAVBawdaAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
 
